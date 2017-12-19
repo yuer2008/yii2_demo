@@ -1,0 +1,14 @@
+common/config/main.php
+
+
+
+
+
+
+
+
+cookie set:
+'request' => [
+    'csrfParam' => '_csrf-frontend',
+    'cookieValidationKey' => 'f9whVOg-VM20nLdHCpEegddBRHvCk8uU' //this value must set
+],

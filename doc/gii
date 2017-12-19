@@ -1,0 +1,22 @@
+gii是yii的代码自动生成工具
+
+1.gii是一个独立模块
+用composer默认是安装过的，如果没有可以通过下面命令安装。
+a. composer.phar require --dev --prefer-dist yiisoft/yii2-gii
+b. "yiisoft/yii2-gii": "~2.0.0" 加入composer.json
+
+2.配置方法：
+在配置文件里加入:安全起见，需要配置访问权限
+	$config['bootstrap'][] = 'gii';
+	$config['modules']['gii'] = [
+		'class' => 'yii\gii\Module',
+		'allowedIPs' => ['127.0.0.1', '::1', '192.168.1.*'],
+	];
+
+3. 使用方法
+配置好后，加入配置了域名http://www.yiidemo.me/
+http://www.yiidemo.me/index.php?r=gii
+在此页面，可以生成的代码有:
+model crud controller form module extension
+另外：通过命令行也是可以使用gii的：
+yii help 

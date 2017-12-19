@@ -1,9 +1,7 @@
 <?php
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
-    require __DIR__ . '/../../common/config/params-local.php',
-    require __DIR__ . '/params.php',
-    require __DIR__ . '/params-local.php'
+    require __DIR__ . '/params.php'
 );
 
 return [
@@ -14,6 +12,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
+            'cookieValidationKey' => 'f9whVOg-VM20nLdHCpEegddBRHvCk8uU' //this value must set
         ],
         'user' => [
             'identityClass' => 'common\models\User',
